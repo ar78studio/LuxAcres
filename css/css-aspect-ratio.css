@@ -1,0 +1,17 @@
+.aspect-ratio {
+  position: relative;
+  display: flex;
+  height: 0;
+  width: 60%;
+  padding-bottom: calc(60% * 9 / 16);
+
+  border: solid 5px red;
+  background: salmon;
+  text-align: center;
+}
+
+p {
+  position: relative;
+  padding: 50px;
+  overflow-y: hidden;
+}

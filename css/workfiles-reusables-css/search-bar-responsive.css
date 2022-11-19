@@ -1,0 +1,1242 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  list-style: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background: #e4eefa;
+}
+
+/* START OPTIONAL HEADER STATEMENT */
+.header-statement h2 {
+  position: relative;
+  /* left:5% adjust the Header H2 Relative to the Main search and Adavanced Button */
+  color: #fe8369;
+  font-size: 2em;
+  padding-top: 80px;
+  margin: 0;
+  font-family: 'Montserrat';
+  font-weight: 400;
+  text-align: center;
+}
+
+.header-statement h1 {
+  position: relative;
+  /* left:5% adjust the Header H1 Relative to the Main search and Adavanced Button */
+
+  color: #fe8369;
+  font-size: 3em;
+  padding-bottom: 30px;
+  margin: 0;
+  font-family: 'Montserrat';
+  font-weight: 500;
+  text-align: center;
+}
+/* END OPTIONAL HEADER STATEMENT */
+
+/* ---------------------------------------------------- */
+
+/* START MAIN PROPERTY SEARCHBOX */
+
+.main-searchbar-wrap {
+  position: absolute;
+  top: 30%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+}
+
+.main-searchbar-wrap .property-search-wrapper {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+}
+
+/* SIZE OF THE PROPERTY SEACH BOX IS SET HERE */
+.main-searchbar-wrap .property-search-wrapper .search-box {
+  flex: auto;
+  width: 730px;
+  background: #fff;
+  height: 40px; /* was 65 */
+  border-radius: 5px;
+  display: flex;
+  padding: 10px;
+  box-shadow: 0 8px 6px -10px #b3c6ff;
+}
+
+/* START .buy .buy-house */
+.main-searchbar-wrap .property-search-wrapper .search-box .buy {
+  width: 220px;
+  border-right: 2px solid #dde2f1;
+  /* color: #9fa3b1; */
+  color: #707070;
+  position: relative;
+  cursor: pointer;
+}
+
+.main-searchbar-wrap .property-search-wrapper .search-box .buy .buy-house {
+  text-transform: uppercase;
+  padding: 13px 15px;
+  font-size: 12px;
+  user-select: none;
+}
+
+.main-searchbar-wrap .property-search-wrapper .search-box .buy ul {
+  position: absolute;
+  /* Top: 60px gap betwenn dropdown box and search bar   */
+  top: 60px;
+  border-radius: 5px;
+  /* left: 0px or negative or positive values move the dropdown box left or right */
+  left: -10px;
+  background: #f7f9ff;
+  width: 150px;
+  padding: 20px;
+  box-shadow: 8px 8px 6px -10px #b3c6ff;
+  display: none;
+}
+
+.main-searchbar-wrap .property-search-wrapper .search-box .buy ul.active {
+  display: block;
+}
+
+.main-searchbar-wrap .property-search-wrapperpper .search-box .buy ul li {
+  padding-bottom: 20px;
+  user-select: none;
+}
+
+.main-searchbar-wrap
+  .property-search-wrapper
+  .search-box
+  .buy
+  ul
+  li:last-child {
+  padding-bottom: 0;
+}
+
+.main-searchbar-wrap .property-search-wrapper .search-box .buy ul li:hover {
+  background: rgba(#fff, #fff, #fff, 0.7);
+}
+
+.main-searchbar-wrap .property-search-wrapper .search-box .buy ul li:hover {
+  color: #fe8369;
+}
+
+/* Orange Drop-Down Triangle */
+
+.main-searchbar-wrap .property-search-wrapper .search-box .buy::before {
+  content: '';
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  border: 8px solid;
+  border-color: #fe8369 transparent transparent transparent;
+}
+
+/* End .buy .buy-house Dropdown */
+
+/* START City City-City Dropdown*/
+.property-search-wrapper .search-box .city {
+  width: 220px;
+  border-right: 2px solid #dde2f1;
+  /* color: #9fa3b1; */
+  color: #707070;
+  position: relative;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.main-searchbar-wrap .property-search-wrapper .search-box .city .city-city {
+  text-transform: uppercase;
+  padding: 13px 15px;
+  font-size: 14px;
+  user-select: none;
+  z-index: 2;
+}
+
+/* Dropdown Box styling for City */
+.main-searchbar-wrap .property-search-wrapper .search-box .city ul {
+  position: absolute;
+  /* Top: 60px gap betwenn dropdown box and search bar   */
+  top: 60px;
+  border-radius: 5px;
+  /* left: 0px or negative or positive values move the dropdown box left or right */
+  left: 0px;
+  background: #f7f9ff;
+  /* Width and Height of dropdown menues */
+  width: 150px;
+  height: 200px;
+  padding: 20px;
+  box-shadow: 8px 8px 6px -10px #b3c6ff;
+  display: none;
+  max-height: 200px;
+  overflow-y: scroll;
+}
+
+.main-searchbar-wrap .property-search-wrapper .search-box .city ul.active {
+  display: block;
+}
+
+.main-searchbar-wrap
+  .main-searchbar-wrap
+  .main-searchbar-wrap
+  .property-search-wrapperpper
+  .search-box
+  .city
+  ul
+  li {
+  padding-bottom: 20px;
+  user-select: none;
+}
+
+.main-searchbar-wrap
+  .property-search-wrapper
+  .search-box
+  .city
+  ul
+  li:last-child {
+  padding-bottom: 0;
+}
+
+.main-searchbar-wrap .property-search-wrapper .search-box .city ul li:hover {
+  color: #fe8369;
+}
+
+/* Orange Drop-Down Triangle */
+.main-searchbar-wrap .property-search-wrapper .search-box .city::before {
+  content: '';
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  border: 8px solid;
+  border-color: #fe8369 transparent transparent transparent;
+}
+
+/* End City City-City Dropdown */
+
+/* START Price Price-range Dropdown*/
+.main-searchbar-wrap .property-search-wrapper .search-box .price {
+  width: 220px;
+  /* border-right: 2px solid #dde2f1; */
+  /* color: #9fa3b1; */
+  color: #707070;
+  position: relative;
+  cursor: pointer;
+}
+
+.main-searchbar-wrap .property-search-wrapper .search-box .price .price-range {
+  text-transform: uppercase;
+  padding: 13px 15px;
+  font-size: 14px;
+  user-select: none;
+}
+
+.main-searchbar-wrap .property-search-wrapper .search-box .price ul {
+  position: absolute;
+  /* Top: 60px gap betwenn dropdown box and search bar   */
+  top: 60px;
+  border-radius: 5px;
+  /* left: 0px or negative or positive values move the dropdown box left or right */
+  left: 0px;
+  background: #f7f9ff;
+  width: 150px;
+  padding: 20px;
+  box-shadow: 8px 8px 6px -10px #b3c6ff;
+  display: none;
+}
+
+.main-searchbar-wrap .property-search-wrapper .search-box .price ul.active {
+  display: block;
+}
+
+.main-searchbar-wrap .property-search-wrapperpper .search-box .price ul li {
+  padding-bottom: 20px;
+  user-select: none;
+}
+
+.main-searchbar-wrap
+  .property-search-wrapper
+  .search-box
+  .price
+  ul
+  li:last-child {
+  padding-bottom: 0;
+}
+
+.main-searchbar-wrap .property-search-wrapper .search-box .price ul li:hover {
+  color: #fe8369;
+}
+
+/* Orange Drop-Down Triangle */
+.main-searchbar-wrap .property-search-wrapper .search-box .price::before {
+  content: '';
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  border: 8px solid;
+  border-color: #fe8369 transparent transparent transparent;
+}
+
+/* END PRICE PRICE-RANGE DROPDOWN */
+
+/* START PROPERTY SEARCH BOX BUTTON */
+
+.main-searchbar-wrap
+  .property-search-wrapper
+  .search-box
+  .search-button
+  .button {
+  position: relative;
+  background-color: #fe8369;
+  color: white;
+  height: 66px;
+  width: 180px;
+  border: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 23px;
+  left: 55.5%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  font-family: 'Montserrat';
+  font-size: 16px;
+  font-weight: lighter;
+}
+
+.main-searchbar-wrap
+  .property-search-wrapper
+  .search-box
+  .search-button
+  .button:hover {
+  background-color: #ff5d69;
+}
+
+/* END PROPERTY SEARCH BOX BUTTON */
+
+/* START ADVANCED OPTIONS BUTTON STYLING */
+
+.main-searchbar-wrap .property-search-wrapper .advanced-options-button {
+  position: absolute;
+  background-color: #fe8369;
+  color: white;
+  height: 66px;
+  width: 66px;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 88.5%;
+  /* left 107% sets the gap between SEARCH button and the MORE OPTIONS */
+  left: 107%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.main-searchbar-wrap .property-search-wrapper .advanced-options-button::after {
+  position: absolute;
+  content: url(/images/list-with-dots.svg);
+  left: 32%;
+}
+
+.main-searchbar-wrap .property-search-wrapper .advanced-options-button:hover {
+  background-color: #ff5d69;
+}
+
+/* END ADVANCED OPTIONS BUTTON STYLING */
+
+/* END MAIN PROPERTY SEARCHBOX */
+
+/* ------------------------------------------------ */
+
+/* START SECOND ROW HIDDEN PROPERTY SEARCHBOX */
+
+.main-searchbar-wrap .second-row-property-search-wrapper {
+  position: relative;
+  top: 218px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  display: none;
+}
+
+/* SIZE OF THE PROPERTY SEACH BOX IS SET HERE */
+.main-searchbar-wrap
+  .second-row-property-search-wrapper
+  .second-row-property-search {
+  width: 730px;
+  background: #fff;
+  height: 65px;
+  border-radius: 5px;
+  display: flex;
+  padding: 10px;
+  box-shadow: 0 8px 6px -10px #b3c6ff;
+}
+
+/* START .bed .bedrooms */
+.main-searchbar-wrap
+  .second-row-property-search-wrapper
+  .second-row-property-search
+  .bed {
+  width: 220px;
+  border-right: 2px solid #dde2f1;
+  /* color: #9fa3b1; */
+  color: #707070;
+  position: relative;
+  cursor: pointer;
+}
+
+.main-searchbar-wrap
+  .second-row-property-search-wrapper
+  .second-row-property-search
+  .bed
+  .bedrooms {
+  text-transform: uppercase;
+  padding: 13px 15px;
+  font-size: 14px;
+  user-select: none;
+}
+
+.main-searchbar-wrap
+  .second-row-property-search-wrapper
+  .second-row-property-search
+  .bed
+  ul {
+  position: absolute;
+  /* Top: 60px gap betwenn dropdown box and search bar   */
+  top: 60px;
+  border-radius: 5px;
+  /* left: 0px or negative or positive values move the dropdown box left or right */
+  left: -10px;
+  background: #f7f9ff;
+  /* Width and Height of dropdown menues */
+  width: 150px;
+  height: 200px;
+  padding: 20px;
+  box-shadow: 8px 8px 6px -10px #b3c6ff;
+  display: none;
+  overflow-y: scroll;
+}
+
+.main-searchbar-wrap
+  .second-row-property-search-wrapper
+  .second-row-property-search
+  .bed
+  ul.active {
+  display: block;
+}
+
+.main-searchbar-wrap
+  .second-row-property-search-wrapper
+  .second-row-property-search
+  .bed
+  ul
+  li {
+  padding-bottom: 20px;
+  user-select: none;
+}
+
+.main-searchbar-wrap
+  .second-row-property-search-wrapper
+  .second-row-property-search
+  .bed
+  ul
+  li:last-child {
+  padding-bottom: 0;
+}
+
+.main-searchbar-wrap
+  .second-row-property-search-wrapper
+  .second-row-property-search
+  .bed
+  ul
+  li:hover {
+  color: #fe8369;
+}
+
+/* Orange Drop-Down Triangle */
+.main-searchbar-wrap
+  .second-row-property-search-wrapper
+  .second-row-property-search
+  .bed::before {
+  content: '';
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  border: 8px solid;
+  border-color: #fe8369 transparent transparent transparent;
+}
+
+/* END .bed .bedroom */
+
+/* ----------------------------------------------- */
+
+/* START min min-price Dropdown*/
+.main-searchbar-wrap
+  .second-row-property-search-wrapper
+  .second-row-property-search
+  .min {
+  width: 220px;
+  border-right: 2px solid #dde2f1;
+  /* color: #9fa3b1; */
+  color: #707070;
+  position: relative;
+  cursor: pointer;
+}
+
+.main-searchbar-wrap
+  .second-row-property-search-wrapper
+  .second-row-property-search
+  .min
+  .min-price {
+  text-transform: uppercase;
+  padding: 13px 15px;
+  font-size: 14px;
+  user-select: none;
+}
+
+/* Dropdown Box styling for Min Price */
+.main-searchbar-wrap
+  .second-row-property-search-wrapper
+  .second-row-property-search
+  .min
+  ul {
+  position: absolute;
+  /* Top: 60px gap betwenn dropdown box and search bar   */
+  top: 60px;
+  border-radius: 5px;
+  /* left: 0px or negative or positive values move the dropdown box left or right */
+  left: 0px;
+  background: #f7f9ff;
+  /* Width and Height of dropdown menues */
+  width: 150px;
+  height: 200px;
+  padding: 20px;
+  box-shadow: 8px 8px 6px -10px #b3c6ff;
+  display: none;
+  max-height: 200px;
+  overflow-y: scroll;
+}
+
+.main-searchbar-wrap
+  .second-row-property-search-wrapper
+  .second-row-property-search
+  .min
+  ul.active {
+  display: block;
+}
+
+.main-searchbar-wrap
+  .second-row-property-search-wrapper
+  .second-row-property-search
+  .min
+  ul
+  li {
+  padding-bottom: 20px;
+  user-select: none;
+}
+
+.main-searchbar-wrap
+  .second-row-property-search-wrapper
+  .second-row-property-search
+  .min
+  ul
+  li:last-child {
+  padding-bottom: 0;
+}
+
+.main-searchbar-wrap
+  .second-row-property-search-wrapper
+  .second-row-property-search
+  .min
+  ul:hover {
+  color: #fe8369;
+}
+
+/* Orange Drop-Down Triangle */
+.main-searchbar-wrap
+  .second-row-property-search-wrapper
+  .second-row-property-search
+  .min::before {
+  content: '';
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  border: 8px solid;
+  border-color: #fe8369 transparent transparent transparent;
+}
+
+/* End min min-price Dropdown */
+
+/* ----------------------------------------------- */
+
+/* START max max-price Dropdown*/
+.main-searchbar-wrap
+  .second-row-property-search-wrapper
+  .second-row-property-search
+  .max {
+  width: 220px;
+  border-right: 2px solid #dde2f1;
+  /* color: #9fa3b1; */
+  color: #707070;
+  position: relative;
+  cursor: pointer;
+}
+
+.main-searchbar-wrap
+  .second-row-property-search-wrapper
+  .second-row-property-search
+  .max
+  .max-price {
+  text-transform: uppercase;
+  padding: 13px 15px;
+  font-size: 14px;
+  user-select: none;
+}
+
+/* Dropdown Box styling for Max Price */
+.main-searchbar-wrap
+  .second-row-property-search-wrapper
+  .second-row-property-search
+  .max
+  ul {
+  position: absolute;
+  /* Top: 60px gap betwenn dropdown box and search bar   */
+  top: 60px;
+  border-radius: 5px;
+  /* left: 0px or negative or positive values move the dropdown box left or right */
+  left: 0px;
+  background: #f7f9ff;
+  /* Width and Height of dropdown menues */
+  width: 150px;
+  height: 200px;
+  padding: 20px;
+  box-shadow: 8px 8px 6px -10px #b3c6ff;
+  display: none;
+  overflow-y: scroll;
+}
+
+.main-searchbar-wrap
+  .second-row-property-search-wrapper
+  .second-row-property-search
+  .max
+  ul.active {
+  display: block;
+}
+
+.main-searchbar-wrap
+  .second-row-property-search-wrapper
+  .second-row-property-search
+  .max
+  ul
+  li {
+  padding-bottom: 20px;
+  user-select: none;
+}
+
+.main-searchbar-wrap
+  .second-row-property-search-wrapper
+  .second-row-property-search
+  .max
+  ul
+  li:last-child {
+  padding-bottom: 0;
+}
+
+.main-searchbar-wrap
+  .second-row-property-search-wrapper
+  .second-row-property-search
+  .max
+  ul
+  li:hover {
+  color: #fe8369;
+}
+
+/* Orange Drop-Down Triangle */
+.main-searchbar-wrap
+  .second-row-property-search-wrapper
+  .second-row-property-search
+  .max::before {
+  content: '';
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  border: 8px solid;
+  border-color: #fe8369 transparent transparent transparent;
+}
+
+/* END max max-price DROPDOWN */
+
+/* ----------------------------------------------- */
+
+/* START .bath .bathrooms Dropdown */
+
+.main-searchbar-wrap
+  .second-row-property-search-wrapper
+  .second-row-property-search
+  .bath {
+  width: 220px;
+  /* border-right: 2px solid #dde2f1; */
+  /* color: #9fa3b1; */
+  color: #707070;
+  position: relative;
+  cursor: pointer;
+}
+
+.main-searchbar-wrap
+  .second-row-property-search-wrapper
+  .second-row-property-search
+  .bath
+  .bathrooms {
+  text-transform: uppercase;
+  padding: 13px 15px;
+  font-size: 14px;
+  user-select: none;
+}
+
+.main-searchbar-wrap
+  .second-row-property-search-wrapper
+  .second-row-property-search
+  .bath
+  ul {
+  position: absolute;
+  /* Top: 60px gap betwenn dropdown box and search bar   */
+  top: 60px;
+  border-radius: 5px;
+  /* left: 0px or negative or positive values move the dropdown box left or right */
+  left: 10px;
+  background: #f7f9ff;
+  /* Width and Height of dropdown menues */
+  width: 150px;
+  height: 200px;
+  padding: 20px;
+  box-shadow: 8px 8px 6px -10px #b3c6ff;
+  display: none;
+  overflow-y: scroll;
+}
+
+.main-searchbar-wrap
+  .second-row-property-search-wrapper
+  .second-row-property-search
+  .bath
+  ul.active {
+  display: block;
+}
+
+.main-searchbar-wrap
+  .second-row-property-search-wrapper
+  .second-row-property-search
+  .bath
+  ul
+  li {
+  padding-bottom: 20px;
+  user-select: none;
+}
+
+.main-searchbar-wrap
+  .second-row-property-search-wrapper
+  .second-row-property-search
+  .bath
+  ul
+  li:last-child {
+  padding-bottom: 0;
+}
+
+.main-searchbar-wrap
+  .second-row-property-search-wrapper
+  .second-row-property-search
+  .bath
+  ul
+  li:hover {
+  color: #fe8369;
+}
+
+/* Orange Drop-Down Triangle */
+.main-searchbar-wrap
+  .second-row-property-search-wrapper
+  .second-row-property-search
+  .bath::before {
+  content: '';
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  border: 8px solid;
+  border-color: #fe8369 transparent transparent transparent;
+}
+
+/* END .bath .bathrooms Dropdown */
+
+/* END SECOND ROW HIDDEN PROPERTY SEARCHBOX */
+
+/* ------------------------------------------------- */
+
+/* START THIRD ROW HIDDEN PROPERTY SEARCHBOX */
+
+.main-searchbar-wrap .third-row-property-search-wrapper {
+  position: relative;
+  top: 227px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+/* SIZE OF THE PROPERTY SEACH BOX IS SET HERE */
+.main-searchbar-wrap
+  .third-row-property-search-wrapper
+  .third-row-property-search {
+  width: 730px;
+  background: #fff;
+  height: 65px;
+  border-radius: 5px;
+  display: flex;
+  padding: 10px;
+  box-shadow: 0 8px 6px -10px #b3c6ff;
+}
+
+/* START .bed .bedrooms */
+.main-searchbar-wrap
+  .third-row-property-search-wrapper
+  .third-row-property-search
+  .plot {
+  width: 220px;
+  border-right: 2px solid #dde2f1;
+  /* color: #9fa3b1; */
+  color: #707070;
+  position: relative;
+  cursor: pointer;
+}
+
+.main-searchbar-wrap
+  .third-row-property-search-wrapper
+  .third-row-property-search
+  .plot
+  .plot-size {
+  text-transform: uppercase;
+  padding: 13px 15px;
+  font-size: 14px;
+  user-select: none;
+}
+
+.main-searchbar-wrap
+  .third-row-property-search-wrapper
+  .third-row-property-search
+  .plot
+  ul {
+  position: absolute;
+  /* Top: 60px gap betwenn dropdown box and search bar   */
+  top: 60px;
+  border-radius: 5px;
+  /* left: 0px or negative or positive values move the dropdown box left or right */
+  left: -10px;
+  background: #f7f9ff;
+  /* Width and Height of dropdown menues */
+  width: 150px;
+  height: 200px;
+  padding: 20px;
+  box-shadow: 8px 8px 6px -10px #b3c6ff;
+  display: none;
+  overflow-y: scroll;
+}
+
+.main-searchbar-wrap
+  .third-row-property-search-wrapper
+  .third-row-property-search
+  .plot
+  ul.active {
+  display: block;
+}
+
+.main-searchbar-wrap
+  .third-row-property-search-wrapper
+  .third-row-property-search
+  .plot
+  ul
+  li {
+  padding-bottom: 20px;
+  user-select: none;
+}
+
+.main-searchbar-wrap
+  .third-row-property-search-wrapper
+  .third-row-property-search
+  .plot
+  ul
+  li:last-child {
+  padding-bottom: 0;
+}
+
+.main-searchbar-wrap
+  .third-row-property-search-wrapper
+  .third-row-property-search
+  .plot
+  ul
+  li:hover {
+  color: #fe8369;
+}
+
+/* Orange Drop-Down Triangle */
+.main-searchbar-wrap
+  .third-row-property-search-wrapper
+  .third-row-property-search
+  .plot::before {
+  content: '';
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  border: 8px solid;
+  border-color: #fe8369 transparent transparent transparent;
+}
+
+/* END .bed .bedroom */
+
+/* ----------------------------------------------- */
+
+/* START min min-price Dropdown*/
+.main-searchbar-wrap
+  .third-row-property-search-wrapper
+  .third-row-property-search
+  .swim {
+  width: 220px;
+  border-right: 2px solid #dde2f1;
+  /* color: #9fa3b1; */
+  color: #707070;
+  position: relative;
+  cursor: pointer;
+}
+
+.main-searchbar-wrap
+  .third-row-property-search-wrapper
+  .third-row-property-search
+  .swim
+  .swimming {
+  text-transform: uppercase;
+  padding: 13px 15px;
+  font-size: 14px;
+  user-select: none;
+}
+
+/* Dropdown Box styling for Min Price */
+.main-searchbar-wrap
+  .third-row-property-search-wrapper
+  .third-row-property-search
+  .swim
+  ul {
+  position: absolute;
+  /* Top: 60px gap betwenn dropdown box and Property Searchbox Itself   */
+  top: 60px;
+  border-radius: 5px;
+  /* left: 0px or negative or positive values move the dropdown box left or right */
+  left: 0px;
+  background: #f7f9ff;
+  /* Width and Height of dropdown menues */
+  width: 150px;
+  padding: 20px;
+  box-shadow: 8px 8px 6px -10px #b3c6ff;
+  display: none;
+  max-height: 200px;
+  overflow-y: scroll;
+}
+
+.main-searchbar-wrap
+  .third-row-property-search-wrapper
+  .third-row-property-search
+  .swim
+  ul.active {
+  display: block;
+}
+
+.main-searchbar-wrap
+  .third-row-property-search-wrapper
+  .third-row-property-search
+  .swim
+  ul
+  li {
+  padding-bottom: 20px;
+  user-select: none;
+}
+
+.main-searchbar-wrap
+  .third-row-property-search-wrapper
+  .third-row-property-search
+  .swim
+  ul
+  li:last-child {
+  padding-bottom: 0;
+}
+
+.main-searchbar-wrap
+  .third-row-property-search-wrapper
+  .third-row-property-search
+  .swim
+  ul
+  li:hover {
+  color: #fe8369;
+}
+
+/* Orange Drop-Down Triangle */
+.main-searchbar-wrap
+  .third-row-property-search-wrapper
+  .third-row-property-search
+  .swim::before {
+  content: '';
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  border: 8px solid;
+  border-color: #fe8369 transparent transparent transparent;
+}
+
+/* End min min-price Dropdown */
+
+/* ----------------------------------------------- */
+
+/* START max max-price Dropdown*/
+.main-searchbar-wrap
+  .third-row-property-search-wrapper
+  .third-row-property-search
+  .garage {
+  width: 220px;
+  border-right: 2px solid #dde2f1;
+  /* color: #9fa3b1; */
+  color: #707070;
+  position: relative;
+  cursor: pointer;
+}
+
+.main-searchbar-wrap
+  .third-row-property-search-wrapper
+  .third-row-property-search
+  .garage
+  .garage-space {
+  text-transform: uppercase;
+  padding: 13px 15px;
+  font-size: 14px;
+  user-select: none;
+}
+
+/* Dropdown Box styling for Max Price */
+.main-searchbar-wrap
+  .third-row-property-search-wrapper
+  .third-row-property-search
+  .garage
+  ul {
+  position: absolute;
+  /* Top: 60px gap betwenn dropdown box and search bar   */
+  top: 60px;
+  border-radius: 5px;
+  /* left: 0px or negative or positive values move the dropdown box left or right */
+  left: 0px;
+  background: #f7f9ff;
+  width: 150px;
+  padding: 20px;
+  box-shadow: 8px 8px 6px -10px #b3c6ff;
+  display: none;
+  overflow-y: scroll;
+}
+
+.main-searchbar-wrap
+  .third-row-property-search-wrapper
+  .third-row-property-search
+  .garage
+  ul.active {
+  display: block;
+}
+
+.main-searchbar-wrap
+  .third-row-property-search-wrapper
+  .third-row-property-search
+  .garage
+  ul
+  li {
+  padding-bottom: 20px;
+  user-select: none;
+}
+
+.main-searchbar-wrap
+  .third-row-property-search-wrapper
+  .third-row-property-search
+  .garage
+  ul
+  li:last-child {
+  padding-bottom: 0;
+}
+
+.main-searchbar-wrap
+  .third-row-property-search-wrapper
+  .third-row-property-search
+  .garage
+  ul
+  li:hover {
+  color: #fe8369;
+}
+
+/* Orange Drop-Down Triangle */
+.main-searchbar-wrap
+  .third-row-property-search-wrapper
+  .third-row-property-search
+  .garage::before {
+  content: '';
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  border: 8px solid;
+  border-color: #fe8369 transparent transparent transparent;
+}
+
+/* END max max-price DROPDOWN */
+
+/* ----------------------------------------------- */
+
+/* START bath bathrooms Dropdown*/
+.main-searchbar-wrap
+  .third-row-property-search-wrapper
+  .third-row-property-search
+  .bath {
+  width: 220px;
+  /* border-right: 2px solid #dde2f1; */
+  /* color: #9fa3b1; */
+  color: #707070;
+  position: relative;
+  cursor: pointer;
+}
+
+.main-searchbar-wrap
+  .third-row-property-search-wrapper
+  .third-row-property-search
+  .bath
+  .bathrooms {
+  text-transform: uppercase;
+  padding: 13px 15px;
+  font-size: 14px;
+  user-select: none;
+}
+
+.main-searchbar-wrap
+  .third-row-property-search-wrapper
+  .third-row-property-search
+  .bath
+  ul {
+  position: absolute;
+  /* Top: 60px gap betwenn dropdown box and search bar   */
+  top: 60px;
+  border-radius: 5px;
+  /* left: 0px or negative or positive values move the dropdown box left or right */
+  left: 0px;
+  background: #fff;
+  /* Width and Height of dropdown menues */
+  width: 150px;
+  height: 200px;
+  padding: 20px;
+  padding-bottom: 20px;
+  box-shadow: 8px 8px 6px -10px #b3c6ff;
+  display: none;
+}
+
+.main-searchbar-wrap
+  .third-row-property-search-wrapper
+  .third-row-property-search
+  .bath
+  ul.active {
+  display: block;
+}
+
+.main-searchbar-wrap
+  .third-row-property-search-wrapper
+  .third-row-property-search
+  .bath
+  ul
+  li {
+  padding-bottom: 20px;
+  user-select: none;
+}
+
+.main-searchbar-wrap
+  .third-row-property-search-wrapper
+  .third-row-property-search
+  .bath
+  ul
+  li:last-child {
+  padding-bottom: 0;
+}
+
+.main-searchbar-wrap
+  .third-row-property-search-wrapper
+  .third-row-property-search
+  .bath
+  ul
+  li:hover {
+  color: #fe8369;
+}
+
+/* Orange Drop-Down Triangle */
+.main-searchbar-wrap
+  .third-row-property-search-wrapper
+  .third-row-property-search
+  .bath::before {
+  content: '';
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  border: 8px solid;
+  border-color: #fe8369 transparent transparent transparent;
+}
+
+.main-searchbar-wrap
+  .third-row-property-search-wrapper
+  .third-row-property-search
+  .search-field {
+  width: 220px;
+  height: 100%;
+  position: relative;
+}
+
+.main-searchbar-wrap
+  .third-row-property-search-wrapper
+  .third-row-property-search
+  .search-field
+  .input {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  font-size: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #707070;
+}
+
+/* END bath bathroom DROPDOWN */
+
+/* END THIRD ROW HIDDEN PROPERTY SEARCHBOX */
+
+/* ------------------------------------------------- */
+
+::-webkit-input-placeholder {
+  color: #707070;
+}
+
+::-moz-input-placeholder {
+  color: #707070;
+}
+
+::-ms-input-placeholder {
+  color: #707070;
+}
+
+/* @media Instructs for the  */
+@media (max-width: 768px) {
+  .main-searchbar-wrap {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

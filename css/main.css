@@ -1,0 +1,658 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy:wght@300;400;600&display=swap');
+
+
+:root {
+  --primary-color: rgba(fff, fff, fff, 0);
+  --overlay-color: rgba(24, 39, 51, 0.85);
+  --menu-speed: 0.75s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  list-style: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #707070;
+
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  align-items: center;
+  background-color: white;
+  justify-content: center;
+  margin: 0;
+  color: #707070;
+  font-family: 'Montserrat, Sorts Mill Goudy';
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header-wrapper {
+  background-image: url(../images/header-bg.jpg);
+  background-color: #4b4b4b;
+  background-blend-mode: overlay;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  height: 100vh;
+}
+
+.nav-wrapper {
+  padding: 20px;
+  /* max-width of 1200px makes the navigation and the logo stay in the frame of the given size of 1200px and not stretch to the edges on the larger screens */
+  max-width: 1500px;
+  height: 100%;
+  min-height: 400px;
+
+  /* margin: 0 auto; centers everything when on larger viewports */
+  margin: 0 auto;
+}
+
+.navigation {
+  display: flex;
+  /* justify-content: space-between; adds the space between the logo and the navigation - pushes the navigation to the right */
+  justify-content: space-between;
+}
+
+header ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header li a {
+  padding: 0 10px;
+  align-items: center;
+}
+
+.navigation li a {
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-size: 16px;
+  color: #ffffff;
+  text-decoration: none;
+  padding-bottom: 0.3rem;
+}
+
+/* ---------------- Start Navigation Hover Underline ---------------- */
+
+.navigation li a:hover {
+  border-bottom: 3px solid #fe8369;
+  transition: all .10s ease-in;
+}
+
+/* ---------------- End Navigation Hover Underline ---------------- */
+
+/* pushes the nav menu away from the Phone Number Button on the very right */
+.nav-styling li:nth-child(5) {
+  padding-right: 50px;
+}
+
+.header-mobile-btn {
+  background-color: #fe8369;
+  color: white;
+  height: 60px;
+  width: 203px;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-mobile-btn img::before {
+  padding-top: 30px;
+}
+
+.logo img {
+  width: 200px;
+  height: 140px;
+  position: relative;
+  top: 60%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.header-statement {
+  padding-bottom: 30px;
+}
+
+.header-statement h2 {
+  color: #fe8369;
+  font-size: 2em;
+  padding-top: 80px;
+  margin: 0;
+  font-family: 'Montserrat';
+  font-weight: 400;
+  text-align: center;
+}
+.header-statement h1 {
+  color: #fe8369;
+  font-size: 3em;
+  padding: 0em;
+  margin: 0;
+  font-family: 'Montserrat';
+  font-weight: 500;
+  text-align: center;
+}
+
+/* ------------------------------------------------ */
+/* START FEATURED PROPERTIES SLIDER STYLES */
+.featured-properties-wrapper {
+  position: relative;
+  padding-top: 50px;
+  width: 100%;
+  background-color: #f0e3d0;
+  /* max-width of 1500px makes the navigation and the logo stay in the frame of the given size of 1200px and not stretch to the edges on the larger screens */
+  height: 100%;
+  /* margin: 0 auto; centers everything when on larger viewports */
+  margin: 0 auto;
+}
+
+.recent-properties-wrapper {
+  position: relative;
+  padding-top: 50px;
+  width: 100%;
+  background-color: #fff;
+  /* max-width of 1500px makes the navigation and the logo stay in the frame of the given size of 1200px and not stretch to the edges on the larger screens */
+  height: 100%;
+  /* margin: 0 auto; centers everything when on larger viewports */
+  margin: 0 auto;
+}
+
+.featured-properties-header {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease-in-out;
+  /* Padding Between Featured Properties Header H2 and SearchBar Header */
+  padding-top: 20px;
+}
+
+.recent-properties-header {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease-in-out;
+  /* Padding Between Featured Properties Header H2 and SearchBar Header */
+  padding-top: 20px;
+}
+
+.featured-properties-header h2 {
+  font-family: 'Sorts Mill Goudy', serif;
+  font-size: 25px;
+  font-weight: 700;
+  color: #707070;
+}
+
+.recent-properties-header h2 {
+  font-family: 'Sorts Mill Goudy', serif;
+  font-size: 25px;
+  font-weight: 700;
+  color: #707070;
+}
+
+/* FEATURED PROPERTIES LEFT ORANGE LINE  */
+.featured-properties-header::before {
+  position: absolute;
+  display: flex;
+  content: ' ';
+  margin-left: -60px;
+  width: 400px;
+  left: 60px;
+  padding-right: 10px;
+  border: 1px solid #fe8369;
+}
+
+.recent-properties-header::before {
+  position: absolute;
+  display: flex;
+  content: ' ';
+  margin-left: -60px;
+  width: 400px;
+  left: 60px;
+  padding-right: 10px;
+  border: 1px solid #fe8369;
+}
+
+.featured-properties-nav {
+  position: absolute;
+  top: 73px;
+  left: 75%;
+  justify-content: space-between;
+  background-color: #f0e3d0;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.recent-properties-nav {
+  position: absolute;
+  top: 73px;
+  left: 75%;
+  justify-content: space-between;
+  background-color: #f0e3d0;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.featured-properties-nav ul {
+  background-color: #f0e3d0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.recent-properties-nav ul {
+  background-color: #f0e3d0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.featured-properties-nav ul a {
+  font-family: 'Sorts Mill Goudy';
+  font-size: 14px;
+  font-weight: 300;
+  color: #707070;
+}
+
+.recent-properties-nav ul a {
+  font-family: 'Sorts Mill Goudy';
+  font-size: 14px;
+  font-weight: 300;
+  color: #707070;
+}
+
+.featured-properties-nav ul a:hover {
+  font-family: 'Sorts Mill Goudy';
+  font-size: 14px;
+  font-weight: 300;
+  color: #fe8369;
+  border-bottom: 1px solid #fe8369;
+  width: 45px;
+  padding-top: 3px;
+}
+
+.recent-properties-nav ul a:hover {
+  font-family: 'Sorts Mill Goudy';
+  font-size: 14px;
+  font-weight: 300;
+  color: #fe8369;
+  border-bottom: 1px solid #fe8369;
+  width: 45px;
+  padding-top: 3px;
+}
+
+.featured-properties-nav ul li a:visited {
+  font-family: 'Sorts Mill Goudy';
+  font-size: 14px;
+  font-weight: 700;
+
+  border-bottom: 1px solid #fe8369;
+  width: 45px;
+  padding-top: 3px;
+}
+
+.recent-properties-nav ul li a:visited {
+  font-family: 'Sorts Mill Goudy';
+  font-size: 14px;
+  font-weight: 700;
+
+  border-bottom: 1px solid #fe8369;
+  width: 45px;
+  padding-top: 3px;
+}
+
+.featured-properties-nav ul li {
+  padding-right: 20px;
+}
+
+.recent-properties-nav ul li {
+  padding-right: 20px;
+}
+
+#view-all-featured-btn {
+  position: relative;
+  display: flex;
+  font-family: 'Montserrat';
+  color: white;
+  font-size: 14px;
+  font-weight: 300;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 40px;
+  padding-left: 40px;
+  border: none;
+  background: #fe8369;
+  border-radius: 5px;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+#view-all-featured-btn:hover {
+  background: #ff5d69;
+  transition: 0.3s ease-in-out;
+}
+
+/* Start - Styling for the Burger Toggle for the Hidden Menu */
+
+/* @media Instructs for the  */
+@media (max-width: 768px) {
+  #toggle {
+    visibility: visible;
+    opacity: 1;
+    margin-top: 6px;
+  }
+
+  .nav-styling {
+    visibility: hidden !important;
+  }
+
+  .thumb-description {
+    font-size: 10px;
+    padding: 5px;
+  }
+
+  .featured-articles,
+  .contact-us,
+  .copyright {
+    font-size: 11px;
+  }
+
+  nav #logo {
+    margin-left: 18px;
+  }
+
+  #menu-hidden a {
+    font-family: 'Roboto Condensed';
+    font-weight: 200;
+    font-size: 20px;
+  }
+
+  nav #menu-main {
+    display: none;
+  }
+
+
+ 
+
+  .header-statement h2 {
+    color: #fe8369;
+    font-size: 1em;
+    padding-top: 80px;
+    margin: 0;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .header-statement h1 {
+    color: #fe8369;
+    font-size: 2em;
+    padding: 0em;
+    margin: 0;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    text-align: center;
+  }
+}
+
+
+/* -----------------START HIDE MAIN PROPERTY SEARCH ON SMALLER SCREENS ------------------------- */
+@media (max-width: 768px ){
+  .property-search-wrapper {
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width:768px) {
+  html, body {
+    overflow-x: hidden;
+  }
+  body {
+    position: relative
+  }
+}
+/* ------------------------------------------ */
+/* ------------------------------------------ */
+
+@media (max-width: 768px) {
+  .featured-properties-header h2 {
+    font-family: 'Sorts Mill Goudy', serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #707070;
+  }
+
+  .featured-properties-nav {
+    position: absolute;
+    top: 120px;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    justify-content: space-between;
+    background-color: #f0e3d0;
+    z-index: 10;
+  }
+
+  .sm-header-statement  {
+    padding-top: 80px;
+  }
+}
+
+
+/* LOGO */
+@media (max-width: 768px) {
+
+ .logo {
+  position: absolute;
+  left: -7%;
+  margin: 0 auto;
+  transform: translateY(50%);
+}
+
+.logo img {
+  width: 22%;
+  height: 22%;
+}
+
+}
+
+
+
+
+
+
+@media (min-width: 768px) {
+  .featured-properties-header::before {
+    position: absolute;
+    display: flex;
+    content: ' ';
+    margin-left: -60px;
+    width: 300px;
+    left: 30px;
+    padding-right: 10px;
+    border: 1px solid #fe8369;
+  }
+}
+
+/* ORANGE LINE ON THE LEFT */
+
+@media (max-width: 768px) {
+  .featured-properties-header::before {
+    position: absolute;
+    display: flex;
+    content: ' ';
+    margin-left: -60px;
+    width: 250px;
+    left: 30px;
+    padding-right: 10px;
+    border: 1px solid #fe8369;
+  }
+}
+
+@media (max-width: 700px) {
+  .featured-properties-header::before {
+    position: absolute;
+    display: flex;
+    content: ' ';
+    margin-left: -60px;
+    width: 200px;
+    left: 30px;
+    padding-right: 10px;
+    border: 1px solid #fe8369;
+  }
+}
+
+@media (max-width: 600px) {
+  .featured-properties-header::before {
+    position: absolute;
+    display: flex;
+    content: ' ';
+    margin-left: -60px;
+    width: 150px;
+    left: 30px;
+    padding-right: 10px;
+    border: 1px solid #fe8369;
+  }
+}
+
+@media (max-width: 500px) {
+  .featured-properties-header::before {
+    position: absolute;
+    display: flex;
+    content: ' ';
+    margin-left: -60px;
+    width: 100px;
+    left: 30px;
+    padding-right: 10px;
+    border: 1px solid #fe8369;
+  }
+}
+
+/* RECENTLY SOLD PROPERTIES */
+
+/* RECENTLY SOLD PROPERTIES */
+
+@media (max-width: 768px) {
+  .recent-properties-header h2 {
+    font-family: 'Sorts Mill Goudy', serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #707070;
+  }
+
+  .recent-properties-nav {
+    position: absolute;
+    top: 120px;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    justify-content: space-between;
+    background-color: #f0e3d0;
+    z-index: 10;
+  }
+}
+
+/* ORANGE LINE ON THE LEFT */
+@media (min-width: 768px) {
+  .recent-properties-header::before {
+    position: absolute;
+    display: flex;
+    content: ' ';
+    margin-left: -60px;
+    width: 300px;
+    left: 30px;
+    padding-right: 10px;
+    border: 1px solid #fe8369;
+  }
+}
+
+@media (max-width: 850px) {
+  .recent-properties-header::before {
+    position: absolute;
+    display: flex;
+    content: ' ';
+    margin-left: -60px;
+    width: 200px;
+    left: 30px;
+    padding-right: 10px;
+    border: 1px solid #fe8369;
+  }
+}
+
+@media (max-width: 768px) {
+  .recent-properties-header::before {
+    position: absolute;
+    display: flex;
+    content: ' ';
+    margin-left: -60px;
+    width: 180px;
+    left: 30px;
+    padding-right: 10px;
+    border: 1px solid #fe8369;
+  }
+}
+
+@media (max-width: 700px) {
+  .recent-properties-header::before {
+    position: absolute;
+    display: flex;
+    content: ' ';
+    margin-left: -60px;
+    width: 150px;
+    left: 30px;
+    padding-right: 10px;
+    border: 1px solid #fe8369;
+  }
+}
+
+@media (max-width: 600px) {
+  .recent-properties-header::before {
+    position: absolute;
+    display: flex;
+    content: ' ';
+    margin-left: -60px;
+    width: 100px;
+    left: 30px;
+    padding-right: 10px;
+    border: 1px solid #fe8369;
+  }
+}
+
+@media (max-width: 500px) {
+  .recent-properties-header::before {
+    position: absolute;
+    display: flex;
+    content: ' ';
+    margin-left: -60px;
+    width: 70px;
+    left: 30px;
+    padding-right: 10px;
+    border: 1px solid #fe8369;
+  }
+}

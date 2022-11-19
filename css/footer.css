@@ -1,0 +1,716 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy:wght@300;400;600&display=swap');
+
+.main-footer-section-wrapper {
+  background-color: #4b4b4b;
+  margin: 0;
+}
+
+.footer-buttons-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 'buying-property selling-property';
+  margin-bottom: 80px;
+}
+
+.footer-buy-sell-wrapper {
+  background-color: #4b4b4b;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease-in-out;
+  /* Padding Between Featured Properties Header H2 and SearchBar Header */
+  padding-top: 60px;
+}
+
+.footer-buy-sell h2 {
+  position: relative;
+  background-color: #4b4b4b;
+  font-family: 'Sorts Mill Goudy', serif;
+  font-size: 25px;
+  font-weight: 500;
+  color: #f0e3d0;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.footer-buy-sell p {
+  display: border-box;
+  text-align: center;
+  font-family: 'Sorts Mill Goudy', serif;
+  font-size: 16px;
+  font-weight: 500;
+  padding-top: 30px;
+  padding-right: 30px;
+  padding-left: 30px;
+  font-size: 16px;
+  color: #f0e3d0;
+  margin-bottom: 60px;
+}
+
+#buying-property-btn {
+  grid-area: buying-property;
+}
+
+#buying-property-btn a {
+  grid-area: buying-property;
+  font-family: 'Montserrat';
+  font-size: 15px;
+  font-weight: 400;
+  color: #fff;
+}
+#buying-property-btn a:hover {
+  grid-area: buying-property;
+  font-family: 'Montserrat';
+  font-size: 15px;
+  font-weight: 400;
+  color: #4b4b4b;
+}
+
+#selling-property-btn {
+  grid-area: selling-property;
+}
+
+#selling-property-btn a {
+  grid-area: buying-property;
+  font-family: 'Montserrat';
+  font-size: 15px;
+  font-weight: 400;
+  color: #fff;
+}
+#selling-property-btn a:hover {
+  grid-area: buying-property;
+  font-family: 'Montserrat';
+  font-size: 15px;
+  font-weight: 400;
+  color: #4b4b4b;
+}
+
+/* Line between Buying Properties button and Selling Properties */
+.footer-button-line {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 100px;
+  margin: 0;
+  padding: 0;
+  left: 90%;
+  top: -30px;
+  border-bottom: 1px solid #fe8369;
+}
+
+.footer-header-line {
+  border-bottom: 1px solid #fe8369;
+  width: 100%;
+  top: 80px;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+
+.footer-copyright-line {
+  border-bottom: 1px solid #fe8369;
+  width: 100%;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  margin-right: 50px;
+}
+
+/* =================================== */
+/* =================================== */
+/* =================================== */
+
+/*START: FOOTER LINK SECTION */
+
+/* .footer-links-section-wrapper {
+  background-color: #4b4b4b;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 60px 0px 100px;
+} */
+
+.footer-links-section-wrapper {
+  display: grid;
+  grid-template-columns: 0.6fr 0.4fr 0.3fr 0.6fr;
+  grid-template-rows: 1fr 0.6fr;
+  grid-template-areas:
+    'footer-logo  quick-links sitemap-links discover-links'
+    'footer-logo  privacy-links subscribe subscribe';
+  grid-gap: 30px;
+  margin-left: 17%;
+}
+
+.footer-logo-column-wrapper {
+  grid-area: footer-logo;
+  text-align: center;
+}
+
+.footer-logo {
+  grid-area: footer-logo;
+  text-align: left;
+}
+
+.footer-logo img {
+  grid-area: footer-logo;
+  justify-content: left;
+  height: 137px;
+  width: 148px;
+  padding-bottom: 20px;
+}
+
+/* START: FOOTER SOCIAL ICONS */
+
+.footer-social-icons {
+  grid-area: footer-logo;
+  text-align: left;
+}
+
+.footer-social-icons a {
+  grid-area: footer-logo;
+  text-align: left;
+  cursor: pointer;
+}
+
+/* Sets Icon color */
+i.fa {
+  color: #f0e3d0;
+  padding: 0 17px 50px 0;
+}
+
+/* END: FOOTER SOCIAL ICONS */
+
+/* Addresses */
+.office-addresses {
+  grid-area: footer-logo;
+  text-align: left;
+}
+
+.french-address {
+  grid-area: footer-logo;
+}
+
+.french-address h4 {
+  text-align: inherit;
+  font-family: 'Sorts Mill Goudy', serif;
+  font-size: 16px;
+  font-weight: lighter;
+  color: #fff;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.french-address p {
+  display: inline-block;
+  text-align: left;
+  font-family: 'Montserrat';
+  font-size: 14px;
+  font-weight: lighter;
+  color: #f0e3d0;
+  padding: 5px;
+}
+
+.spanish-address {
+  grid-area: footer-logo;
+}
+
+.spanish-address h4 {
+  font-family: 'Sorts Mill Goudy', serif;
+  font-size: 16px;
+  font-weight: lighter;
+  color: #fff;
+  padding-bottom: 10px;
+}
+
+.spanish-address p {
+  display: inline-block;
+  text-align: left;
+  font-family: 'Montserrat';
+  font-size: 14px;
+  font-weight: lighter;
+  color: #f0e3d0;
+  padding: 5px;
+}
+
+/* START: FOOTER LINK STYLING */
+
+.footer-quick-links h4,
+.footer-sitemap-links h4,
+.footer-discover-links h4,
+.footer-privacy-links h4,
+.subscribe-field-btn-wrapper h4 {
+  font-family: 'Sorts Mill Goudy';
+  font-size: 14px;
+  font-weight: 300;
+  color: #fff;
+  padding-bottom: 10px;
+}
+
+.footer-quick-links {
+  grid-area: quick-links;
+}
+
+.footer-quick-links a {
+  font-family: 'Montserrat';
+  font-size: 12px;
+  font-weight: 300;
+  color: #f0e3d0;
+  padding: 0 15px 20px 0;
+}
+
+.footer-sitemap-links {
+  grid-area: sitemap-links;
+}
+
+.footer-sitemap-links a {
+  grid-area: sitemap-links;
+  font-family: 'Montserrat';
+  font-size: 12px;
+  font-weight: 300;
+  color: #f0e3d0;
+  padding: 0 15px 20px 0;
+}
+
+.footer-discover-links {
+  grid-area: discover-links;
+  margin-right: 60px;
+}
+
+.footer-discover-links a {
+  grid-area: discover-links;
+  font-family: 'Montserrat';
+  font-size: 12px;
+  font-weight: 300;
+  color: #f0e3d0;
+  padding: 0 15px 20px 0;
+}
+
+.footer-privacy-links {
+  grid-area: privacy-links;
+  margin-top: -60px;
+}
+
+.footer-privacy-links a {
+  grid-area: privacy-links;
+  font-family: 'Montserrat';
+  font-size: 12px;
+  font-weight: 300;
+  color: #f0e3d0;
+  padding: 0 15px 20px 0;
+}
+
+/* START: Footer Links Hover Styles */
+.footer-quick-links a:hover {
+  font-family: 'Montserrat';
+  font-size: 12px;
+  font-weight: 300;
+  color: #fe8369;
+  padding: 0 15px 20px 0;
+}
+
+.footer-sitemap-links a:hover {
+  grid-area: sitemap-links;
+  font-family: 'Montserrat';
+  font-size: 12px;
+  font-weight: 300;
+  color: #fe8369;
+  padding: 0 15px 20px 0;
+}
+
+.footer-discover-links a:hover {
+  grid-area: discover-links;
+  font-family: 'Montserrat';
+  font-size: 12px;
+  font-weight: 300;
+  color: #fe8369;
+  padding: 0 15px 20px 0;
+}
+
+.footer-privacy-links a:hover {
+  grid-area: privacy-links;
+  font-family: 'Montserrat';
+  font-size: 12px;
+  font-weight: 300;
+  color: #fe8369;
+  padding: 0 15px 20px 0;
+}
+
+/* END: Footer Links Hover Styles */
+
+/* END: FOOTER LINK STYLING */
+
+/* START: FOOTER SUBSCRIBE WINDOW */
+
+.subscribe-field-btn-wrapper {
+  grid-area: subscribe;
+  width: 360px;
+  height: 50px;
+  position: relative;
+  background-color: #4b4b4b;
+  margin-top: -60px;
+}
+
+.subscribe-field-btn-wrapper .input {
+  grid-area: subscribe;
+  width: 200px;
+  height: 50px;
+  border: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  font-size: 12px;
+  padding: 15px;
+  border: 1px solid #f0e3d0;
+  background: #4b4b4b;
+  color: #f0e3d0;
+}
+
+.footer-subscribe-btn {
+  grid-area: subscribe;
+  position: absolute;
+  right: 20%;
+  width: 100px;
+  height: 50px;
+  border: 0;
+  font-family: 'Montserrat';
+  font-size: 12px;
+  color: #fff;
+  background: #fe8369;
+  padding: 15px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  cursor: pointer;
+}
+
+.footer-subscribe-btn:hover {
+  grid-area: subscribe;
+  position: absolute;
+  margin: auto;
+  width: 100px;
+  height: 50px;
+  border: 0;
+  font-family: 'Montserrat';
+  font-size: 12px;
+  color: #fff;
+  background: #ff5d69;
+  padding: 15px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  cursor: pointer;
+}
+
+/* START: COPYRIGHT INFO AREA */
+
+.copyright-info {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  text-align: center;
+  padding-bottom: 30px;
+  font-family: 'Montserrat';
+  font-size: 14px;
+  font-weight: lighter;
+  color: #f0e3d0;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer-button-line {
+    visibility: hidden;
+  }
+
+  .footer-buttons-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-mobile-btn {
+    margin: 10px;
+  }
+
+  .footer-links-section-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.2fr 0.2fr 0.2fr 0.2fr 0.3fr;
+    grid-template-areas:
+      'footer-logo'
+      'quick-links'
+      'sitemap-links'
+      'discover-links'
+      'privacy-links'
+      'subscribe';
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+
+  .footer-logo-column-wrapper {
+    grid-area: footer-logo;
+    text-align: center;
+  }
+
+  .footer-logo {
+    grid-area: footer-logo;
+    text-align: center;
+  }
+
+  .footer-logo img {
+    grid-area: footer-logo;
+    justify-content: center;
+    height: 137px;
+    width: 148px;
+    padding-bottom: 10px;
+  }
+
+  /* START: FOOTER SOCIAL ICONS */
+
+  .footer-social-icons {
+    grid-area: footer-logo;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  /* Sets Icon color */
+  i.fa {
+    color: #f0e3d0;
+    padding: 0 17px 30px 0;
+  }
+
+  /* END: FOOTER SOCIAL ICONS */
+
+  /* Addresses */
+  .office-addresses {
+    grid-area: footer-logo;
+    text-align: center;
+  }
+
+  .french-address {
+    grid-area: footer-logo;
+  }
+
+  .french-address h4 {
+    grid-area: footer-logo;
+    text-align: center;
+    font-family: 'Sorts Mill Goudy', serif;
+    font-size: 16px;
+    font-weight: lighter;
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .french-address p {
+    grid-area: footer-logo;
+    display: inline-block;
+    text-align: center;
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: lighter;
+    color: #f0e3d0;
+    padding: 5px;
+  }
+
+  .spanish-address {
+    grid-area: footer-logo;
+  }
+
+  .spanish-address h4 {
+    grid-area: footer-logo;
+
+    font-family: 'Sorts Mill Goudy', serif;
+    font-size: 16px;
+    font-weight: lighter;
+    color: #fff;
+    padding-bottom: 10px;
+  }
+
+  .spanish-address p {
+    grid-area: footer-logo;
+    display: inline-block;
+    text-align: center;
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: lighter;
+    color: #f0e3d0;
+    padding: 5px;
+  }
+
+  /* START: FOOTER LINK STYLING */
+
+  .footer-quick-links h4 {
+    font-family: 'Sorts Mill Goudy';
+    font-size: 15px;
+    font-weight: 300;
+    color: #fff;
+    padding-bottom: 10px;
+    padding-top: 10x;
+  }
+  .footer-sitemap-links h4 {
+    font-family: 'Sorts Mill Goudy';
+    font-size: 15px;
+    font-weight: 300;
+    color: #fff;
+    padding-bottom: 10px;
+    padding-top: 5x;
+  }
+  .footer-discover-links h4 {
+    font-family: 'Sorts Mill Goudy';
+    font-size: 15px;
+    font-weight: 300;
+    color: #fff;
+    padding-bottom: 10px;
+    padding-top: 5x;
+  }
+
+  .footer-privacy-links h4 {
+    font-family: 'Sorts Mill Goudy';
+    font-size: 15px;
+    font-weight: 300;
+    color: #fff;
+    padding-bottom: 10px;
+    margin-top: 30px;
+  }
+  .subscribe-field-btn h4 {
+    font-family: 'Sorts Mill Goudy';
+    font-size: 15px;
+    font-weight: 300;
+    color: #fff;
+    padding-bottom: 10px;
+    padding-top: 5x;
+  }
+
+  .footer-quick-links {
+    grid-area: quick-links;
+    text-align: center;
+  }
+
+  .footer-quick-links a {
+    font-family: 'Montserrat';
+    font-size: 12px;
+    font-weight: 300;
+    color: #f0e3d0;
+  }
+
+  .footer-sitemap-links {
+    grid-area: sitemap-links;
+    text-align: center;
+  }
+
+  .footer-sitemap-links a {
+    font-family: 'Montserrat';
+    font-size: 12px;
+    font-weight: 300;
+    color: #f0e3d0;
+  }
+
+  .footer-discover-links {
+    grid-area: discover-links;
+    text-align: center;
+    margin: 0;
+  }
+
+  .footer-discover-links a {
+    font-family: 'Montserrat';
+    font-size: 12px;
+    font-weight: 300;
+    color: #f0e3d0;
+    padding-bottom: 10px;
+  }
+
+  .footer-privacy-links {
+    grid-area: privacy-links;
+    text-align: center;
+  }
+
+  .footer-privacy-links a {
+    grid-area: privacy-links;
+    font-family: 'Montserrat';
+    font-size: 12px;
+    font-weight: 300;
+    color: #f0e3d0;
+  }
+
+  /* Subscribe Field and Button */
+
+  .subscribe-field-btn-wrapper ul li h4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* This is the wrapper class for subscribe button */
+  .subscribe-field-btn-wrapper {
+    grid-area: subscribe;
+    width: 360px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    background-color: #4b4b4b;
+  }
+
+  .subscribe-field-btn-wrapper .input {
+    grid-area: subscribe;
+    width: 200px;
+    height: 50px;
+    border: 0;
+    border-radius: 5px;
+    font-size: 12px;
+    padding: 15px;
+    border: 1px solid #f0e3d0;
+    background: #4b4b4b;
+    color: #f0e3d0;
+    margin-bottom: 20px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-subscribe-btn {
+    grid-area: subscribe;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    left: auto;
+    right: auto;
+    width: 100px;
+    height: 50px;
+    border: 0;
+    font-family: 'Montserrat';
+    font-size: 12px;
+    color: #fff;
+    background: #fe8369;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .footer-subscribe-btn:hover {
+    grid-area: subscribe;
+    position: relative;
+    margin: auto;
+    width: 100px;
+    height: 50px;
+    border: 0;
+    font-family: 'Montserrat';
+    font-size: 12px;
+    color: #fff;
+    background: #ff5d69;
+    padding: 15px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+  }
+
+  /* COPYRIGHT INIFO STYLING */
+  .copyright-info {
+    margin: 0 20px 0 20px;
+  }
+}

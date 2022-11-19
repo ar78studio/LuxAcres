@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy:wght@300;400;600&display=swap');
+
+.team-header-wrapper {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease-in-out;
+  /* Padding Between Featured Properties Header H2 and SearchBar Header */
+  padding-top: 20px;
+}
+
+.team-vertical-line {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  height: 100px;
+  margin: 0;
+  padding: 0;
+  left: -50%;
+  border-right: 2px solid #fe8369;
+}
+
+.team-header-wrapper h3 {
+  font-family: 'Sorts Mill Goudy';
+  font-size: 25px;
+  font-weight: 800;
+  color: #707070;
+}
+
+.team-wrapper {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  transition: 0.3s ease-in-out;
+  padding-bottom: 40px;
+}
+
+.team-member {
+  display: grid;
+  object-fit: cover;
+  grid-template-columns: repeat(auto-fit, max(320px));
+  grid-template-rows: 200px 120px 25px 10px;
+  grid-template-areas: 'team-image' 'team-member-description' 'team-member-name' 'title';
+  font-family: 'Sorts Mill Goudy';
+  text-align: center;
+
+  padding: 0 20px 0 20px;
+}
+
+.team-image {
+  grid-area: team-image;
+  padding: 10px;
+}
+
+.team-image img {
+  display: border-box;
+  text-align: center;
+  padding: 10px;
+  border-radius: 50%;
+  border: 2px solid #fe8369;
+  height: 200px;
+  width: 200px;
+}
+
+.team-member-description {
+  grid-area: team-member-description;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.team-member-description p {
+  font-family: 'Montserrat';
+  font-size: 14px;
+  font-weight: 500;
+  color: #707070;
+  padding: 10px;
+}
+
+.team-member-name span {
+  text-align: center;
+}
+
+.team-member-name strong {
+  grid-area: team-member-name;
+  font-family: 'Sorts Mill Goudy';
+  font-size: 18px;
+  font-weight: 900;
+  text-align: center;
+  color: #707070;
+  padding: 0 20px 0 20px;
+}
+
+.title {
+  grid-area: title;
+  font-family: 'Sorts Mill Goudy';
+  font-size: 16px;
+  color: #707070;
+  padding: 0 20px 0 20px;
+}
+
+@media (max-width: 768px) {
+  .team-header-wrapper h3 {
+    font-family: 'Sorts Mill Goudy';
+    font-size: 20px;
+    font-weight: 500;
+    color: #707070;
+  }
+
+  .team-image {
+    grid-area: team-image;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+  }
+
+  .team-image img {
+    display: border-box;
+    text-align: center;
+    padding: 10px;
+    border-radius: 50%;
+    border: 2px solid #fe8369;
+    height: 200px;
+    width: 200px;
+  }
+
+  .team-member-description {
+    grid-area: team-member-description;
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding-top: 20px;
+  }
+
+  .team-member-name strong {
+    grid-area: team-member-name;
+    position: relative;
+    font-family: 'Sorts Mill Goudy';
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    color: #707070;
+    margin: auto;
+  }
+
+  .title {
+    grid-area: title;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Sorts Mill Goudy';
+    font-size: 12px;
+    color: #707070;
+    padding: 0 0 40px 0;
+  }
+}
